@@ -62,9 +62,10 @@ To perform a complete release, run:
     </license>
   </licenses>
   <scm>
-    <connection>scm:cvs:pserver:anonymous@serp.cvs.sourceforge.net:/cvsroot/serp:serp/serp</connection>
-    <developerConnection>scm:cvs:ext:${maven.username}@serp.cvs.sourceforge.net:/cvsroot/serp:serp/serp</developerConnection>
-    <url>http://serp.cvs.sourceforge.net/serp/serp</url>
+      <connection>https://github.com/veselov/serp</connection>
+      <developerConnection>scm:git:https://github.com/veselov/serp.git</developerConnection>
+      <url>http://serp.cvs.sourceforge.net/serp/serp</url>
+      <tag>HEAD</tag>
   </scm>
   <dependencies>
     <dependency>
