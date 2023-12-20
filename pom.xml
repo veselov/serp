@@ -24,14 +24,14 @@ To perform a complete release, run:
 	mvn clean compile package assembly:assembly deploy site site:deploy
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0     http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.sourceforge.serp</groupId>
   <artifactId>serp</artifactId>
   <packaging>jar</packaging>
   <name>Serp</name>
-  <version>1.15.2-xl4.1</version>
+  <version>1.15.2-xl4.2-SNAPSHOT</version>
   <description>Serp is an open source framework for manipulating Java bytecode.</description>
   <url>http://serp.sourceforge.net</url>
   <issueManagement>
@@ -62,7 +62,7 @@ To perform a complete release, run:
       <connection>https://github.com/veselov/serp</connection>
       <developerConnection>scm:git:https://github.com/veselov/serp.git</developerConnection>
       <url>http://serp.cvs.sourceforge.net/serp/serp</url>
-      <tag>serp-1.15.2-xl4.1</tag>
+      <tag>HEAD</tag>
   </scm>
   <dependencies>
     <dependency>
