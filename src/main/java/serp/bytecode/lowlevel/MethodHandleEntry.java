@@ -59,14 +59,14 @@ public class MethodHandleEntry extends Entry {
     
     /**
      * The Entry Type depends on both the reference kind and the Class Version (CV).
-     * 
+     * {@code
      * 1 (REF_getField), 2 (REF_getStatic), 3 (REF_putField), or 4 (REF_putStatic) - CONSTANT_Fieldref_info
      * 5 (REF_invokeVirtual) or 8 (REF_newInvokeSpecial) - CONSTANT_Methodref_info
      * 6 (REF_invokeStatic) or 7 (REF_invokeSpecial) 
      *    - If CV < 52:  CONSTANT_Methodref_info
      *    - if CV >= 52: CONSTANT_Methodref_info or CONSTANT_InterfaceMethodref_info
      * 9 (REF_invokeInterface) - CONSTANT_InterfaceMethodref_info
-     * 
+     * }
      * @return
      */
     public Entry getReference() {

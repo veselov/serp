@@ -80,7 +80,10 @@ public class ConstantPool implements VisitAcceptor {
         entry.setPool(this);
         _entries.add(entry);
         entry.setIndex(_entries.size());
-        _lookup.put(key, entry);
+        // don't put NULL keys in lookup, it's a BAD idea (I hope)
+        if (key != null) {
+            _lookup.put(key, entry);
+        }
         if (entry.isWide())
             _entries.add(null);
         return entry.getIndex();

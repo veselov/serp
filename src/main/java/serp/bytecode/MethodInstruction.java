@@ -155,7 +155,7 @@ public class MethodInstruction extends Instruction {
      * @param dec the full class name of the method's declaring class
      * @param name the method name
      * @param returnType the full class name of the method return type
-     * @param param the full class names of the method param types
+     * @param params the full class names of the method param types
      * @return this instruction, for method chaining
      */
     public MethodInstruction setMethod(String dec, String name,
@@ -169,7 +169,7 @@ public class MethodInstruction extends Instruction {
      * @param dec the full class name of the method's declaring class, or the bootstrap index for InvokeDynamic
      * @param name the method name
      * @param returnType the full class name of the method return type
-     * @param param the full class names of the method param types
+     * @param params the full class names of the method param types
      * @param copy whether to copy the the parameter array
      * @return this instruction, for method chaining
      */
@@ -216,7 +216,7 @@ public class MethodInstruction extends Instruction {
      *
      * @param name the method name
      * @param returnType the full class name of the method return type
-     * @param param the full class names of the method param types
+     * @param params the full class names of the method param types
      * @return this instruction, for method chaining
      */
     public MethodInstruction setMethod(String name, String returnType,
@@ -231,7 +231,7 @@ public class MethodInstruction extends Instruction {
      * @param dec the method's declaring class
      * @param name the method name
      * @param returnType the class of the method return type
-     * @param param the class of the method param types
+     * @param params the class of the method param types
      * @return this instruction, for method chaining
      */
     public MethodInstruction setMethod(Class dec, String name,
@@ -253,7 +253,7 @@ public class MethodInstruction extends Instruction {
      *
      * @param name the method name
      * @param returnType the class of the method return type
-     * @param param the class of the method param types
+     * @param params the class of the method param types
      * @return this instruction, for method chaining
      */
     public MethodInstruction setMethod(String name, Class returnType,
@@ -275,7 +275,7 @@ public class MethodInstruction extends Instruction {
      * @param dec the method's declaring class
      * @param name the method name
      * @param returnType the class of the method return type
-     * @param param the class of the method param types
+     * @param params the class of the method param types
      * @return this instruction, for method chaining
      */
     public MethodInstruction setMethod(BCClass dec, String name,
@@ -297,7 +297,7 @@ public class MethodInstruction extends Instruction {
      *
      * @param name the method name
      * @param returnType the class of the method return type
-     * @param param the class of the method param types
+     * @param params the class of the method param types
      * @return this instruction, for method chaining
      */
     public MethodInstruction setMethod(String name, BCClass returnType,
@@ -493,8 +493,6 @@ public class MethodInstruction extends Instruction {
 
     /**
      * Set the param types of the method this instruction operates on.
-     *
-     * @return this instruction, for method chaining
      */
     public void setMethodParams(Class[] types) {
         if (types == null)
@@ -509,8 +507,6 @@ public class MethodInstruction extends Instruction {
 
     /**
      * Set the param types of the method this instruction operates on.
-     *
-     * @return this instruction, for method chaining
      */
     public void setMethodParams(BCClass[] types) {
         if (types == null)

@@ -13,6 +13,8 @@ public class TestConstantPool extends TestCase {
     private IntEntry _intEntry = new IntEntry(1);
     private LongEntry _longEntry = new LongEntry(2L);
     private UTF8Entry _utf8Entry = new UTF8Entry("4");
+    private MethodTypeEntry _mte1 = new MethodTypeEntry(1);
+    private NameAndTypeEntry _nate1 = new NameAndTypeEntry(8, 8);
 
     public TestConstantPool(String test) {
         super(test);
@@ -196,6 +198,26 @@ public class TestConstantPool extends TestCase {
         assertEquals(0, _pool.size());
         assertEquals(0, _pool.findIntEntry(1, false));
         assertEquals(0, _pool.findUTF8Entry("4", false));
+    }
+
+    public void testNullKeys() {
+
+        _pool.clear();
+        assertEquals(0, _pool.size());
+
+        // this will create an entry with a NULL key
+        _pool.addEntry(_mte1);
+
+        // this led to an NPE because hash of the _nate1's key
+        // is 0, as it uses the same index values and the hash
+        // function returns (index1 XOR index2). Because the
+        // hash of null keys is also 0, there is a clash, and
+        // key.equals(another) is invoked - this causes an NPE
+        // because pool keys don't have null check in equals.
+        _pool.addEntry(_nate1);
+
+        assertEquals(2, _pool.size());
+
     }
 
     /**

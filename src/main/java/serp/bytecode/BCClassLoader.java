@@ -19,7 +19,7 @@ public class BCClassLoader extends ClassLoader {
     /**
      * Constructor. Supply the project to use when looking for classes.
      *
-     * @param parent the parent classoader
+     * @param loader the parent classoader
      */
     public BCClassLoader(Project project, ClassLoader loader) {
         super(loader);

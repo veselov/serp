@@ -156,8 +156,8 @@ public class LoadInstruction extends LocalVariableInstruction {
     }
 
     /**
-     * Equivalent to <code>getLocal () == 0 && getType () ==
-     * Object.class</code>; the <code>this</code> ptr
+     * Equivalent to {@code getLocal () == 0 && getType () ==
+     * Object.class}; the <code>this</code> ptr
      * is always passed in local variable 0.
      */
     public boolean isThis() {
